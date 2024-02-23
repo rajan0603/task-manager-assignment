@@ -12,7 +12,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/tasks');
+      const response = await fetch('https://task-manager-235b.onrender.com/tasks');
       const data = await response.json();
       setTasks(data);
     } catch (error) {
@@ -22,7 +22,7 @@ function App() {
 
   const addTask = async () => {
     try {
-      const response = await fetch('http://localhost:5000/tasks', {
+      const response = await fetch('https://task-manager-235b.onrender.com/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ function App() {
 
   const toggleTaskCompletion = async (taskId, completed) => {
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${taskId}`, {
+      const response = await fetch(`https://task-manager-235b.onrender.com/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function App() {
 
   const deleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${taskId}`, {
+      const response = await fetch(`https://task-manager-235b.onrender.com/${taskId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
