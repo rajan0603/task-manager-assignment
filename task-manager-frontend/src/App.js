@@ -43,7 +43,7 @@ function App() {
 
   const toggleTaskCompletion = async (taskId, completed) => {
     try {
-      const response = await fetch(`https://task-manager-235b.onrender.com/${taskId}`, {
+      const response = await fetch(`https://task-manager-235b.onrender.com/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ function App() {
 
   const deleteTask = async (taskId) => {
     try {
-      const response = await fetch(`https://task-manager-235b.onrender.com/${taskId}`, {
+      const response = await fetch(`https://task-manager-235b.onrender.com/tasks/${taskId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
